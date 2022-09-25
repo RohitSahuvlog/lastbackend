@@ -7,11 +7,11 @@ require("dotenv").config();
 const loginControl = Router();
 
 loginControl.post("/login", async (req, res) => {
-  console.log(req.body)
+  // console.log(req.body)
   try {
     const { email, password: frontend_password } = req.body;
     const User = await userModel.find({ email});
-   
+  //  console.log(User)
     const { password: hash } = User[User.length-1];
 
     becryptjs.compare(frontend_password, hash, async function (err, result) {

@@ -24,9 +24,9 @@ app.use(cors());
 app.post("/signup", SignUpControl);
 
 app.post("/login", loginControl);
-app.get("/ad", (req,res)=>{
-  res.send("Backend link add")
-});
+// app.get("/ad", (req,res)=>{
+//   res.send("Backend link add")
+// });
 app.use("/userfood", userFoodRoutes);
 app.use("/userexercise", exerciseRoutes);
 

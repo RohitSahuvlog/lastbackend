@@ -8,7 +8,7 @@ const SignUpControl = Router();
 SignUpControl.post("/signup", validator, async (req, res) => {
   try {
     const FrontendUserData = req.body;
-    console.log(FrontendUserData)
+    // console.log(FrontendUserData)
     const { password } = FrontendUserData;
 
     bcryptjs.genSalt(10, (err, salt) => {

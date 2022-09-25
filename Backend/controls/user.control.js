@@ -9,9 +9,9 @@ userRoutes.get("/home", async (req, res) => {
 
 userRoutes.get("/userdata", async (req, res) => {
   // use authentication method to get the user email id:-
-  // const {email} = req.body;
+  const {email} = req.body;
 
-  const user_data = await userModel.findOne({ email: "raju@gmail.com" });
+  const user_data = await userModel.findOne({ email });
   res.status(201).send(user_data);
 });
 
